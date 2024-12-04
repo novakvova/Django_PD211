@@ -4,7 +4,15 @@ py -m venv .venv
 
 code .
 
-.venv/Scripts/activate.bat
+.venv\Scripts\activate.bat
 cd blog
 py manage.py runserver 9589
+
+deactivate
+
+.venv\Scripts\activate.bat
+cd blog
+py manage.py migrate
+
+
 
