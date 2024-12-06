@@ -17,5 +17,26 @@ deactivate
 cd blog
 py manage.py migrate
 
+--------------------
+.venv\Scripts\activate.bat
+pip install mysqlclient
+pip install mariadb
+cd blog
+python manage.py migrate
+
+py manage.py runserver 9589
+py manage.py makemigrations
+python manage.py migrate
+
+---------Testing ORM----------
+py manage.py shell
+>>>from posts.models import Post
+>>>p=Post()
+>>>p
+>>>p.title="Пост №1. Краще ви вигулювати собак у парку."
+>>>p.save()
+>>>Post.objects.all()
+>>>exit()
+
 
 
