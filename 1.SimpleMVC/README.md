@@ -45,5 +45,20 @@ py manage.py shell
 >>>exit()
 ```
 
+```
+cd blog
+py manage.py shell
+>>>from posts.models import Post
+>>>p=Post()
+>>>p.title="Пост №2. Пошук козачки :)."
+>>>p.save()
+>>>Post.objects.all()
+>>>exit()
+```
+
+```
+py manage.py runserver 9589
+```
+
 
 
