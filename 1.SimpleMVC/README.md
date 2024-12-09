@@ -16,6 +16,7 @@ deactivate
 ```
 .venv\Scripts\activate.bat
 cd blog
+py manage.py startapp posts
 py manage.py migrate
 ```
 
@@ -57,6 +58,12 @@ py manage.py shell
 ```
 
 ```
+.venv\Scripts\activate.bat
+cd blog
+py manage.py createsuperuser
+admin
+
+AdminKrot1+
 py manage.py runserver 9589
 ```
 
