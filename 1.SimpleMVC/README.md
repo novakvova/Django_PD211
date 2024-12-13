@@ -67,5 +67,10 @@ AdminKrot1+
 py manage.py runserver 9589
 ```
 
-
+```
+cd blog
+pip install Pillow
+py manage.py makemigrations
+python manage.py migrate
+```
 
