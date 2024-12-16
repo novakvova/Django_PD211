@@ -74,3 +74,17 @@ py manage.py makemigrations
 python manage.py migrate
 ```
 
+Global Database
+```
+https://filess.io/
+
+roxejep832@ronete.com
+KabanKrot!*D-+
+
+Server: miq8f.h.filess.io
+Name: django_frameeast
+Username: django_frameeast
+Password: 906bb29409c08e6449e3576f904e48fb8b502f9c
+Port number: 3305
+```
+
