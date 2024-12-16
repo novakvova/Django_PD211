@@ -88,3 +88,13 @@ Password: 906bb29409c08e6449e3576f904e48fb8b502f9c
 Port number: 3305
 ```
 
+-------Add Super user--------
+.venv\Scripts\activate.bat
+cd myblog
+py manage.py migrate
+py manage.py createsuperuser
+admin
+
+SuperAdminKrot1-
+```
+
