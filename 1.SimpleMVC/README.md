@@ -98,3 +98,11 @@ admin
 SuperAdminKrot1-
 ```
 
+Register user
+```
+.venv\Scripts\activate.bat
+cd blog
+py manage.py startapp users
+py manage.py runserver 9589
+```
+
