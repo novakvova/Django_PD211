@@ -5,4 +5,5 @@ app_name="posts"
 
 urlpatterns = [
     path('', views.post_list, name="list"),
+    path('create', views.post_new, name="create"),
 ]
