@@ -9,8 +9,10 @@ def register_view(request):
         form = forms.CustomUserForm()
     else:
         form = forms.CustomUserForm(request.POST)
+        print("is valid "+str(form.is_valid()))
+        print("form "+str(form))
         if form.is_valid():
-            # form.save()
+            #form.save()
             login(request, form.save())
             return redirect('posts:list')
     return render(request, 'users/register.html', {'form': form})

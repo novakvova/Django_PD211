@@ -103,6 +103,7 @@ Register user
 .venv\Scripts\activate.bat
 cd blog
 py manage.py startapp users
+pip install django-widget-tweaks
 py manage.py runserver 9589
 ```
 
