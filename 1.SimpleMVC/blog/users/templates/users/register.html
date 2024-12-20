@@ -17,6 +17,16 @@
             </div>
 
             <div class="mb-3">
+                <label for="id_last_name" class="form-label">Прізвище</label>
+                {{form.last_name|add_class:"form-control"}}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_first_name" class="form-label">Ім’я</label>
+                {{form.first_name|add_class:"form-control"}}
+            </div>
+
+            <div class="mb-3">
               <label for="id_password1" class="form-label">Пароль</label>
               {{form.password1|add_class:"form-control"}}
             </div>

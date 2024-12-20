@@ -1,13 +1,14 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, logout
+from . import forms
 
 # Create your views here.
 def register_view(request):
     if request.method != 'POST':
-        form = UserCreationForm()
+        form = forms.CustomUserForm()
     else:
-        form = UserCreationForm(request.POST)
+        form = forms.CustomUserForm(request.POST)
         if form.is_valid():
             # form.save()
             login(request, form.save())

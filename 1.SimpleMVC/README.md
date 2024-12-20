@@ -106,3 +106,11 @@ py manage.py startapp users
 py manage.py runserver 9589
 ```
 
+
+Add new Column
+```
+.venv\Scripts\activate.bat
+cd blog
+py manage.py makemigrations
+python manage.py migrate
+```
