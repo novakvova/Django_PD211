@@ -25,3 +25,7 @@ Qwerty1-
 py manage.py runserver 5091
 
 pip install djangorestframework
+
+npm create vite@latest my-react-app -- --template react-ts
+
+pip install django-cors-headers
