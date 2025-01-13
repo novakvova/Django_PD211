@@ -1,3 +1,7 @@
+py -m venv .venv
+
+.venv\Scripts\activate.bat
+
 pip install django
 
 python.exe -m pip install --upgrade pip
