@@ -1,15 +1,18 @@
 // import {useEffect, useState} from "react";
 // import axios from "axios";
-import {APP_ENV} from "../../../env";
+import {APP_ENV} from "../../env";
 // import {ICategoryItem} from "../types.ts";
-import {useCreateCategoryMutation, useGetCategoriesQuery} from "../../../services/apiCategory.ts";
+import {useGetCategoriesQuery} from "../../services/apiCategory.ts";
+import {Link} from "react-router-dom";
+// import {useNavigate} from "react-router-dom";
 
 const CategoryListPage = () => {
 
+    // const navigate = useNavigate();
 
     const { data: list, error, isLoading } = useGetCategoriesQuery();
 
-    const [createCategory] = useCreateCategoryMutation();
+    // const [createCategory] = useCreateCategoryMutation();
 
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Error loading categories!</div>;
@@ -28,31 +31,33 @@ const CategoryListPage = () => {
     console.log("APP_ENV", APP_ENV.REMOTE_BASE_URL);
     console.log("Render component");
 
-    const onCrateCategoryClick = async () => {
-        try {
-            const response = await createCategory({
-                name: "Красивий кіт",
-                slug: "red",
-                description: "Добрий кіт - ситий кіт."
-            }).unwrap();
+    // const onCrateCategoryClick = async () => {
+    //     try {
+    //         const response = await createCategory({
+    //             name: "Красивий кіт",
+    //             slug: "red",
+    //             description: "Добрий кіт - ситий кіт."
+    //         }).unwrap();
+    //
+    //         console.log("Категорія успішно створена:", response);
+    //     } catch (error) {
+    //         console.error("Помилка під час створення категорії:", error);
+    //     }
+    // }
 
-            console.log("Категорія успішно створена:", response);
-        } catch (error) {
-            console.error("Помилка під час створення категорії:", error);
-        }
-    }
+
 
     return (
         <>
             <h1 className={"text-center text-4xl font-bold text-blue-500"}>Список категорій</h1>
 
-            <button type="button" onClick={onCrateCategoryClick}
+            <Link to={"create"}
                     className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
                 Додати
-            </button>
+            </Link>
 
 
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div className="mt-4 relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>

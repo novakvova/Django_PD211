@@ -33,6 +33,8 @@ npm i axios
 
 npm install @reduxjs/toolkit react-redux @types/react-redux
 
+npm install react-router-dom
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
