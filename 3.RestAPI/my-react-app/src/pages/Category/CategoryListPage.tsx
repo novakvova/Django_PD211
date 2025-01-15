@@ -16,36 +16,10 @@ const CategoryListPage = () => {
 
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Error loading categories!</div>;
-    // const [list, setList] = useState<ICategoryItem[]>([]);
-    //
-    // useEffect(() => {
-    //     axios.get<ICategoryItem[]>(`${APP_ENV.REMOTE_BASE_URL}/api/categories`)
-    //         .then(resp => {
-    //             const {data} = resp;
-    //             setList(data); //оновляємо дані у стейті, буде працювати Render компонента
-    //             console.log("Результат асинхрого методу на сервер", data);
-    //         });
-    //     console.log("Use Effect");
-    // }, []);
+
 
     console.log("APP_ENV", APP_ENV.REMOTE_BASE_URL);
     console.log("Render component");
-
-    // const onCrateCategoryClick = async () => {
-    //     try {
-    //         const response = await createCategory({
-    //             name: "Красивий кіт",
-    //             slug: "red",
-    //             description: "Добрий кіт - ситий кіт."
-    //         }).unwrap();
-    //
-    //         console.log("Категорія успішно створена:", response);
-    //     } catch (error) {
-    //         console.error("Помилка під час створення категорії:", error);
-    //     }
-    // }
-
-
 
     return (
         <>
